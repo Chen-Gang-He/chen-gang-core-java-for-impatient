@@ -7,6 +7,7 @@
     <groupId>chengang.com</groupId>
     <artifactId>core-java-for-impatient</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>Source, testing code and exercises</name>
 
     <build>
         <plugins>
@@ -17,8 +18,29 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+                <version>2.3.2</version>
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.7</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
