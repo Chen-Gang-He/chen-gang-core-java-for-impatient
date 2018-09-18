@@ -13,6 +13,7 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Properties;
+import java.util.regex.Pattern;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -87,11 +88,14 @@ public class Gist {
             String stagingTablePathPrefix = prop.getProperty("vtm_staging_table_data_path_prefix");
             String stagingTableFieldDelimiter = prop.getProperty("vtm_staging_table_field_delimiter");
 
-            String[] configs = new String[] {authUserName, authPassword, authClientid, authSecret, loginHost,
+            String[] configs = new String[]{authUserName, authPassword, authClientid, authSecret, loginHost,
                     stagingTablePathPrefix, stagingTableFieldDelimiter};
             System.out.println(Arrays.toString(configs));
-            prop.entrySet().forEach(entry -> logger.error(
+            prop.entrySet().stream().filter(entry -> Pattern.matches("^vtm.*", (String) entry.getKey())).forEach(entry -> logger.error(
                     MessageFormat.format("    {0}: {1}", entry.getKey(), entry.getValue())));
+
+            Path path = Paths.get("data\\aa\\", "\\a\\c");
+            System.out.println(path.toString());
 
         } catch (IOException ex) {
             ex.printStackTrace();
