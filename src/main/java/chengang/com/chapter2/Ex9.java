@@ -1,5 +1,6 @@
 package chengang.com.chapter2;
 
+
 /**
  * Implement a class Car that models a car traveling along the x-axis, consuming gas as it moves. Provide methods to
  * drive by a given number of miles, to add a given number of gallons to the gas tank, and to get the current distance
@@ -48,7 +49,7 @@ public class Ex9 {
     public static void main(String[] args) {
         Ex9 ex9 = new Ex9();
         Ex9.Car car = ex9.new Car(0D, 0D, 10D);
-        System.out.println(car);
+        System.out.println(car.mpg);
         car.addGas(50D);
         System.out.println(car);
         car.drive(10D);
@@ -57,6 +58,10 @@ public class Ex9 {
         System.out.println(car);
         car.drive(2000);
         System.out.println(car);
+        Gist gist = new Gist("eee");
+        System.out.println(gist.show(new Gist("ppp")));
+
+
 
     }
 }
