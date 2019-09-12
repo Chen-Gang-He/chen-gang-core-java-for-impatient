@@ -31,10 +31,10 @@ public class Gist {
         Ex9 ex9 = new Ex9();
         Ex9.Car car = ex9.new Car(0.0D, 10.0D, 10.0D);
         Gist gist = new Gist();
-        // Ex10 ex10 = new Ex10("own");
+//        Ex10 ex10 = new Ex10("own");
         System.out.println("xxxx");
-        // System.out.println(gist.show(ex10));
-        // System.out.println(gist.showPrivate(ex10));
+//        System.out.println(gist.show(ex10));
+//        System.out.println(gist.showPrivate(ex10));
 
     }
 

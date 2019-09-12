@@ -6,7 +6,6 @@ Use the MethodPrinter program in Section 4.5.1, “Enumerating Class Members,”
 int[] class. Extra credit if you can identify the one method (discussed in this chapter) that is wrongly described.
  */
 
-import com.sun.istack.internal.NotNull;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
