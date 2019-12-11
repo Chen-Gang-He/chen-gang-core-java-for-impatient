@@ -29,6 +29,11 @@ class Entry<K, V> implements Comparable<Entry<K, V>> {
     public int compareTo(Entry<K, V> o) {
         return key == o.key && value == o.value ? 1 : 0;
     }
+
+    @Override
+    public String toString() {
+        return String.format("[Key=%s, Value=%s]", key.toString(), value.toString());
+    }
 }
 
 class Table<K, V> {
