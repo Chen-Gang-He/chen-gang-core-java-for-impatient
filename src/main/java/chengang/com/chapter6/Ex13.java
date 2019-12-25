@@ -16,7 +16,7 @@ public class Ex13 {
     static <T> void maxMin(List<T> elements, Comparator<? super T> comparator, List<? super T> results) {
         minMax(elements, comparator, results);
         // ? super T can not be caught by T
-        Ex13.<T>swapHelper((ArrayList<T>) results, 0, results.size() - 1);
+        Ex13.swapHelper((ArrayList<T>) results, 0, results.size() - 1);
     }
 
     public static void main(String[] args) {
